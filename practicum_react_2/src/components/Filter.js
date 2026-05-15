@@ -11,6 +11,7 @@ const Filter = (props) => {
     event.target.form.reset();
     props.changePage(1);
     props.filtering(props.fullData);
+    props.setCurrentData(props.fullData);
     if (props.resetSort && typeof props.resetSort === 'function') {
       props.resetSort();
     }
@@ -59,6 +60,7 @@ const Filter = (props) => {
 
     props.changePage(1);
     props.filtering(arr);
+    props.setCurrentData(arr);
   }
 
   return (

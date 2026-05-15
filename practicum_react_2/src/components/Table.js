@@ -52,7 +52,7 @@ const Table = (props) => {
     return( 
       <>
         <h4>Фильтры</h4>
-        <Filter filtering={ updateFilteredData } data={ dataTable } fullData={ props.data } changePage={ setActivePage } resetSort={ resetSortFunc } amountRows={ props.amountRows}/>
+        <Filter filtering={ updateFilteredData } data={ dataTable } fullData={ props.data } changePage={ setActivePage } resetSort={ resetSortFunc } amountRows={ props.amountRows} setCurrentData={props.setCurrentData}/>
         <Sort data={ dataTable } filteredData={ filteredData } columns={ headKeys } sorting={ updateDataTable } changePage={ setActivePage } onResetSort={ setResetSortFunc } />
         <table>
             <TableHead head={ headKeys } />
